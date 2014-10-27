@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="nl" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+	<!-- 
+		TYPO3 dienstverlening: alterNET Internet BV
+		ontwikkeling - training - advies - hosting - marketing
+		Bel voor meer informatie: 078 635 1200 of via http://www.alternet.nl/
+	-->
+	<title>Toegankelijke Video</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/screen.css" media="all">	
+	
+	<!-- 	
+		
+		Stap 1: Plaats de benodige bestanden		
+		---		
+		Step 1: include the necessary files	
+	-->
+	
+	<link href="resources/css/video-js.css" type="text/css" rel="stylesheet" media="screen" />	
+	<link href="resources/css/video-js-audio-description.css" type="text/css" rel="stylesheet" media="screen" />	
+	<script src="resources/js/video.js" type="text/javascript"></script>
+	<script src="resources/js/video-js-audio-description.js" type="text/javascript"></script>
+	<script src="resources/js/youtube.js" type="text/javascript"></script>	
+</head>
+
+<body>	
+	<div class="container">		
+		<div class="header">    
+		</div>
+		<div class="video">	
+			<!-- 			
+	
+				Stap 2: hieronder kunt u de links naar de verschillende video formaten plaatsen
+				en (als u daar over beschikt) ene posterafbeelding, deze wordt getoond wanneer er nog niet 
+				op "afspelen" is geklikt				
+				---				
+				Step 2: Below this comment line you can link the available video formats and (if available)
+				a posterimage which will be shown before pressing play.
+			
+			-->
+			<video id="video_1" class="video-js vjs-default-skin" width="700" height="544" preload="auto" poster="resources/video/big-buck-bunny-poster.jpg" controls data-setup='{"techOrder":["youtube","html5","flash"], "ytcontrols": true}'>
+				<source src="resources/video/big-buck-bunny-webm.webm" type="video/webm" />
+				<source src="resources/video/big-buck-bunny-ogg.ogv" type="video/ogg" />
+				<source src="resources/video/big-buck-bunny-mp4.mp4" type="video/mp4" /> 						
+				<source src="http://www.youtube.com/watch?v=PIiReMLJpbA" type="video/youtube" />        
+				<track kind="captions" src="resources/cap-sub/big-buck-bunny-captions.vtt" srclang="en" label="Nederlands"></track>
+				<track kind="subtitles" src="resources/cap-sub/big-buck-bunny-sub.vtt" srclang="en" label="Nederlands"></track>
+			</video>
+			
+			<p class='ag'>Audio description Demo</p>
+			
+			<!--
+			
+				Ter demonstratie tonen we hieronder het audio-element zo dat het synchronisatie
+				process tussen positie in de video en het volume zichtbaar is. Door het toevoegen 
+				van het attribuut hidden="true" kan je het audio-element ontzichtbaar maken of middels css.				
+				---				
+				For demo purposes we show the audio-element so the syncing between position and volume
+				will be visible. You can hide the audio-element by adding  hidden="true" as attribute to
+				the audio-element or hide it through css.					
+			
+			-->
+			
+			<!-- 
+				
+				Stap 3: Het id attribuut van het audio-element moet overeenkomen met het video element: 
+				Video id: video_1
+				Audio id: audio_video_1 					
+				De prefix is voor audioguidance: audio_{video-id}				
+				---				
+				The id attribute of the audio-element must correspond to the video with a prefix.	
+				Video id: video_1
+				Audio id: audio_video_1 					
+				De prefix for audioguidance: audio_{video-id}				
+			
+			-->
+			
+			<audio id="audio_video_1" src="resources/video/big-buck-bunny-mp3.mp3" controls="controls"></audio>  
+			
+			<div class="vjs-no-video">
+				<strong>Download</strong>
+				<ul>
+					<li><a href="resources/video/big-buck-bunny-mp4.mp4">Big Buck Bunny -  MP4 Formaat</a></li>
+					<li><a href="resources/video/big-buck-bunny-webm.webm">Big Buck Bunny -  WebM Formaat</a> </li>
+					<li><a href="resources/video/big-buck-bunny-ogg.ogv">Big Buck Bunny -  Ogg Formaat</a></li>
+					<li><a href="http://www.youtube.com/watch?v=PIiReMLJpbA">Bekijk Big Buck Bunny op YouTube</a></li>						
+					<li><a href="resources/video/big-buck-bunny-sub.vtt">download de ondertiteling</a></li>
+					<li><a href="resources/video/big-buck-bunny-captions.vtt">download de beschrijving (captions)</a></li>
+					<li><a href="resources/video/big-buck-bunny-mp3.mp3">download het gesproken audio spoor</a></li>
+				</ul>
+			 </div>				 
+		</div>
+		<div class="footer">
+			<p>
+				Deze module is ontwikkeld door <a href="http://www.alternet.nl" target="_blank">alterNET Internet B.V.</a> Heeft u vragen en/of opmerkingen over deze videospeler, 
+				neem dan contact met ons op via support@alternet.nl.
+				<br /><br />
+				Met vriendelijke groet,
+			</p>
+			<p>
+				alterNET Internet BV<br />
+				Langesteijn 124<br />
+				3342LG Hendrik-Ido-Ambacht<br />
+			</p>
+			<p>
+				Tel: 078-6351200<br />
+				E-mail: support@alternet.nl<br />
+				Website: <a href="http://www.alternet.nl" target="_blank">www.alternet.nl</a><br />
+			</p>
+		</div>
+		
+	</div>
+
+<script type='text/javascript'>
+	
+	/**
+	  * stap 4: Setup videojs met het id van de video en de audioGuidance plugin
+	  * ---
+	  * Step 4: Setup videojs with the video-id and audioGuidance plugin
+	  */
+	
+    videojs("video_1", {
+        plugins: {
+            audioDescription : {               
+            },
+            audioDescriptionControlButton : {
+            }
+        }
+    });
+	
+	/**	
+	Wanneer u meer dan 1 video op de pagina wilt tonen kunt de aanroep van videojs herhalen met de 
+	nieuwe id's	
+	--	
+	When you want to show more then 1 video on your webpage, repeat the videojs call with 
+	their corresponding id's	
+	
+	videojs("video_2", {
+        plugins: {
+            audioDescription : {               
+            },
+            audioDescriptionControlButton : {
+            }
+        }
+    });
+	
+	videojs("video_3", {
+        plugins: {
+            audioDescription : {               
+            },
+            audioDescriptionControlButton : {
+            }
+        }
+    });
+	
+	etc..
+	
+	*/
+	
+</script>
+
+</body>
+</html>

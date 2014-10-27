@@ -1,0 +1,8 @@
+UPDATE 01-09-2014
+
+- changed pluginname AudioGuidance to AudioDesciption
+- Changed AudioDescription icon to universal AD icon
+- AudioDescription css removed from video-js.css and placed in seperated file
+
+
+

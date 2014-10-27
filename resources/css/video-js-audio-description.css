@@ -1,0 +1,86 @@
+
+/* Audio Guidance Button Button */
+.vjs-default-skin .vjs-audiodescription-button {
+    float:right;
+    cursor:pointer;
+}
+
+.vjs-default-skin .vjs-audiodescription-button:before {
+    content: "A";
+    font-family:trebuchet MS;
+    font-weight:bold;
+    line-height:30px;
+    font-size:19px;
+}
+
+.video-js-box{
+    margin-bottom:50px;
+}
+
+
+.vjs-default-skin.vjs-has-started.vjs-fullscreen .vjs-control-bar {
+    bottom:0;
+}
+
+.vjs-control-bar input[type=button]{
+    height:30px;
+    border:0;
+    color:#fff;
+    background-color:transparent;
+    width:30px;
+}
+
+.vjs-paused .vjs-play-control{
+    background:transparent url('Icons/play-small.png') no-repeat 8px 7px;
+    margin-right:15px;
+}
+
+.vjs-playing .vjs-play-control{
+    background:transparent url('Icons/pause-small.png') no-repeat 8px 7px;
+    margin-right:15px;
+}
+
+.vjs-big-play-button{
+    background:transparent url('Icons/play.png') no-repeat 37px 17px;
+}
+
+.vjs-fullscreen-control {
+    background:transparent url('Icons/enter-fullscreen.png') no-repeat 10px 8px;
+}
+
+.vjs-fullscreen .vjs-fullscreen-control {
+    background:transparent url('Icons/exit-fullscreen.png') no-repeat 10px 11px;
+}
+
+.vjs-control-bar input[type=button]:focus,
+.vjs-control-bar input[type=button]:hover{
+    /* box-shadow */
+    -webkit-box-shadow: 0 0 2em #ffffff;
+    -moz-box-shadow: 0 0 2em #ffffff;
+    box-shadow: 0 0 2em #ffffff;
+}
+
+.vjs-mute-control{
+    background:transparent url('Icons/volume.png') no-repeat -71px 6px;
+}
+
+.vjs-mute-control.vjs-vol-0{
+    background:transparent url('Icons/volume.png') no-repeat 4px 6px;
+}
+
+.vjs-mute-control.vjs-vol-1{
+    background-position: -21px 6px;
+}
+
+.vjs-mute-control.vjs-vol-2{
+    background-position: -46px 6px;
+}
+
+.vjs-mute-control.vjs-vol-3{
+    background-position: -71px 6px;
+}
+
+.vjs-audiodescription-button{
+    background:transparent url('Icons/audio-description.png') no-repeat 1px 9px;
+}
+

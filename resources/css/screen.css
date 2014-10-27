@@ -1,0 +1,117 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+}
+
+p{
+	margin-bottom:19px;
+	line-height:21px;
+}
+
+.container{	
+	width:700px;	
+	margin:0 auto;
+}
+
+.header{
+	height:100px;
+	background: url(../images/alternet-logo.jpg) no-repeat;
+}
+
+.vjs-no-video{
+	background:#8fc0ed;
+	margin-top:30px;
+	width:700px;
+}
+
+.vjs-no-video strong{
+	font-weight:bold;
+	display:block;
+	padding:10px;
+	background:#81b2df;
+}
+
+.vjs-no-video ul li{
+	
+}
+
+.vjs-no-video ul li a{
+	display:block;
+	padding:10px;
+	color:#000000;
+}
+
+.vjs-no-video ul li a:hover{
+	background:#b1d8fd;
+	color:#000000;	
+}
+
+.ag{
+	margin-top:60px;
+	display:block;	
+}
+
+.footer{
+	padding:50px 0;
+}
+
+audio{
+	margin-top:10px;
+	width:700px;
+	background-color: #95B9C7;
+	/* remove comments if you want to hide audio-element
+	   display:none; */
+}
+
+video{
+	-moz-box-shadow: 0 0 20px #254e74;
+	-webkit-box-shadow:  0 0 20px #254e74;
+	box-shadow:  0 0 20px #254e74;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#254e74')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#254e74');
+}
+
+
